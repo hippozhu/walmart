@@ -10,8 +10,8 @@ def readSalesData():
   reader.next()
   for row in reader:
     salelist.append(Sale(int(row[0]), int(row[1]), date(*[int(x) for x in row[2].split('-')]), float(row[3]), bool(row[4])))
-  return salelist
   #pickle.dump(salelist, open('SalesList', 'wb'))
+  return salelist
 
 
 if __name__ == '__main__':
